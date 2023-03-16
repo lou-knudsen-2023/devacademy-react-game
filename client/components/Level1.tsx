@@ -1,19 +1,24 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function Level1() {
   const [count, setCount] = useState(-375)
-
-  const handleClick = () => {
-    setCount(count + 5)
-  }
-
-  const handleKeyPress = (e) => {
-    if (e.key === 'ArrowRight') {
-      setCount(count + 5)
-    } else if (e.key === 'ArrowLeft' && count >= -375) {
-      setCount(count - 5)
+  useEffect(() => {
+    const handleKeyPress = (e) => {
+      if (e.key === 'ArrowRight') {
+        setCount(count + 5)
+      } else if (e.key === 'ArrowLeft' && count >= -375) {
+        setCount(count - 5)
+      }
     }
-  }
+    document.addEventListener('keydown', handleKeyPress)
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyPress)
+    }
+  }, [count])
+  // const handleClick = () => {
+  //   setCount(count + 5)
+  // }
 
   return (
     <>
@@ -26,10 +31,10 @@ function Level1() {
         />
       </div>
       <div>
-        <button onKeyDown={(e) => console.log(e)} onClick={handleClick}>
-          press
-        </button>
-        <input type="text" onKeyDown={handleKeyPress} />
+        {/* <button onKeyDown={(e) => console.log(e)} onClick={handleClick}> */}
+        {/* press */}
+        {/* </button> */}
+        {/* <input type="text" onKeyDown={handleKeyPress} /> */}
       </div>
     </>
   )

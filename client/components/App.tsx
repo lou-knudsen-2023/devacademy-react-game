@@ -2,6 +2,8 @@ import Header from './Header'
 import Footer from './Footer'
 import Level1 from './Level1'
 
+import { useState } from 'react'
+
 function App() {
   return (
     <>
@@ -11,5 +13,4 @@ function App() {
     </>
   )
 }
-
 export default App
