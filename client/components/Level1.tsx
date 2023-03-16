@@ -8,13 +8,20 @@ function Level1() {
   }
 
   return (
-    <div className="level-container">
-      <img
-        src="https://i.imgur.com/VHQwkas.gif"
-        alt="character"
-        className="character"
-      />
-    </div>
+    <>
+      <div className="level-container">
+        <img
+          src="https://i.imgur.com/VHQwkas.gif"
+          alt="character"
+          className="character"
+          onMouseOver={setCount}
+          style={{ left: count }}
+        />
+      </div>
+      <div>
+        <button onClick={handleClick}>press</button>
+      </div>
+    </>
   )
 }
 
