@@ -1,4 +1,6 @@
 import Level1 from './Level1'
+import Header from './Header'
+import Footer from './Footer'
 
 import { useState } from 'react'
 
