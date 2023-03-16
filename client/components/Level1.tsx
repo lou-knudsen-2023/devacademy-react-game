@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react'
 
 function Level1() {
-  const [count, setCount] = useState(-375)
+  const [count, setCount] = useState(-420)
   useEffect(() => {
     const handleKeyPress = (e) => {
-      if (e.key === 'ArrowRight') {
-        setCount(count + 5)
-      } else if (e.key === 'ArrowLeft' && count >= -375) {
-        setCount(count - 5)
+      if (e.key === 'ArrowRight' && count <= 415) {
+        setCount(count + 10)
+      } else if (e.key === 'ArrowLeft' && count >= -420) {
+        setCount(count - 10)
       }
     }
     document.addEventListener('keydown', handleKeyPress)
@@ -22,7 +22,7 @@ function Level1() {
 
   return (
     <>
-      <div className="level-container">
+      <div className="level1-container">
         <img
           src="https://i.imgur.com/VHQwkas.gif"
           alt="character"
