@@ -29,4 +29,5 @@ body {
   z-index: 1;
   left: -375px;
   transform: scale(0.5);
+  /* transform: scaleX(1) */
 }
