@@ -4,7 +4,6 @@ import Footer from './Footer'
 
 import { useState } from 'react'
 
-
 function App() {
   return (
     <>

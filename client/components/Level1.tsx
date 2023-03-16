@@ -11,17 +11,29 @@ function Level1() {
       if (e.key === 'ArrowRight' && horizontal <= 430) {
         setHorizontal(horizontal + 10)
         {
-          if (horizontal === 430) {
+          if (horizontal === 270 && vertical === 90) {
             console.log('fuck yeah')
             // ADD IN REDIRECT HERE
           }
         }
       } else if (e.key === 'ArrowLeft' && horizontal >= -420) {
         setHorizontal(horizontal - 10)
+        if (horizontal === 270 && vertical === 90) {
+          console.log('fuck yeah')
+          // ADD IN REDIRECT HERE
+        }
       } else if (e.key === 'ArrowUp' && vertical >= -20) {
         setVertical(vertical - 10)
+        if (horizontal === 270 && vertical === 90) {
+          console.log('fuck yeah')
+          // ADD IN REDIRECT HERE
+        }
       } else if (e.key === 'ArrowDown' && vertical <= 390) {
         setVertical(vertical + 10)
+        if (horizontal === 270 && vertical === 90) {
+          console.log('fuck yeah')
+          // ADD IN REDIRECT HERE
+        }
       }
     }
     document.addEventListener('keydown', handleKeyPress)
