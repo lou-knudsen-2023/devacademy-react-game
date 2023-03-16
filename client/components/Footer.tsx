@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function Footer() {
   const [colour, setColour] = useState('black')
@@ -17,8 +18,9 @@ function Footer() {
       <p onMouseEnter={colourHandler} style={{ color: { colour } }}>
         made by JAIL
       </p>
+      <Link to={'/Level1'}>to Level1</Link>
+      <Link to={'/Test'}>to Test</Link>
     </footer>
-
   )
 }
 
