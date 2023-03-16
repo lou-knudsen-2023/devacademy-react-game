@@ -32,3 +32,16 @@ body {
   /* transform: scaleX(1) */
 }
 
+
+.test-container {
+  width: 900px;
+  height: 500px;
+  border: 1px solid black;
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2015/07/tumblr_nmvrs6ubl71qze3hdo1_r1_500.gif);
+  background-repeat: no-repeat;
+  background-size:cover;
+  margin: auto;
+  /* padding-top: 25px; */
+  /* padding-bottom: 25px; */
+}
+
