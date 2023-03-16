@@ -18,6 +18,8 @@ function Level1() {
       document.removeEventListener('keydown', handleKeyPress)
     }
   }, [count])
+
+  console.log(count)
   // const handleClick = () => {
   //   setCount(count + 5)
   // }
