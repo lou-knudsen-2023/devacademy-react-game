@@ -7,6 +7,14 @@ function Level1() {
     setCount(count + 5)
   }
 
+  const handleKeyPress = (e) => {
+    if (e.key === 'ArrowRight') {
+      setCount(count + 5)
+    } else if (e.key === 'ArrowLeft' && count >= -375) {
+      setCount(count - 5)
+    }
+  }
+
   return (
     <>
       <div className="level-container">
@@ -14,12 +22,14 @@ function Level1() {
           src="https://i.imgur.com/VHQwkas.gif"
           alt="character"
           className="character"
-          onMouseOver={setCount}
           style={{ left: count }}
         />
       </div>
       <div>
-        <button onClick={handleClick}>press</button>
+        <button onKeyDown={(e) => console.log(e)} onClick={handleClick}>
+          press
+        </button>
+        <input type="text" onKeyDown={handleKeyPress} />
       </div>
     </>
   )
