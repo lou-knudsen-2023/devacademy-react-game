@@ -4,10 +4,18 @@ function Level1() {
   const [horizontal, setHorizontal] = useState(-420)
   const [vertical, setVertical] = useState(200)
 
+  console.log(horizontal)
+
   useEffect(() => {
     const handleKeyPress = (e) => {
-      if (e.key === 'ArrowRight' && horizontal <= 420) {
+      if (e.key === 'ArrowRight' && horizontal <= 430) {
         setHorizontal(horizontal + 10)
+        {
+          if (horizontal === 430) {
+            console.log('fuck yeah')
+            // ADD IN REDIRECT HERE
+          }
+        }
       } else if (e.key === 'ArrowLeft' && horizontal >= -420) {
         setHorizontal(horizontal - 10)
       } else if (e.key === 'ArrowUp' && vertical >= -20) {
