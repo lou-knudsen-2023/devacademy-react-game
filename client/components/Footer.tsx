@@ -18,6 +18,7 @@ function Footer() {
         made by JAIL
       </p>
     </footer>
+
   )
 }
 
