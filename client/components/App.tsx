@@ -7,6 +7,7 @@ import East from './East'
 import South from './South'
 import West from './West'
 import Shop from './Shop'
+import Home from './Home'
 
 import { Route, Routes } from 'react-router-dom'
 
