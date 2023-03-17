@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 function North() {
-  const [horizontal, setHorizontal] = useState(-420)
-  const [vertical, setVertical] = useState(200)
+  const [horizontal, setHorizontal] = useState(0)
+  const [vertical, setVertical] = useState(400)
   const navigate = useNavigate()
 
   console.log(horizontal)
@@ -12,33 +12,14 @@ function North() {
     const handleKeyPress = (e) => {
       if (e.key === 'ArrowRight' && horizontal <= 430) {
         setHorizontal(horizontal + 10)
-        {
-          if (horizontal === 270 && vertical === 90) {
-            console.log('fuck yeah')
-            // ADD IN REDIRECT HERE
-            navigate('/Test')
-          }
-        }
       } else if (e.key === 'ArrowLeft' && horizontal >= -420) {
         setHorizontal(horizontal - 10)
-        if (horizontal === 270 && vertical === 90) {
-          console.log('fuck yeah')
-          // ADD IN REDIRECT HERE
-          navigate('/Test')
-        }
       } else if (e.key === 'ArrowUp' && vertical >= -20) {
         setVertical(vertical - 10)
-        if (horizontal === 270 && vertical === 90) {
-          console.log('fuck yeah')
-          // ADD IN REDIRECT HERE
-          navigate('/Test')
-        }
       } else if (e.key === 'ArrowDown' && vertical <= 390) {
         setVertical(vertical + 10)
-        if (horizontal === 270 && vertical === 90) {
-          console.log('fuck yeah')
-          // ADD IN REDIRECT HERE
-          navigate('/Test')
+        if (vertical > 380) {
+          navigate('/centre')
         }
       }
     }
@@ -51,7 +32,7 @@ function North() {
 
   return (
     <>
-      <div className="level1-container">
+      <div className="north-container">
         <img
           src="https://i.imgur.com/VHQwkas.gif"
           alt="character"
