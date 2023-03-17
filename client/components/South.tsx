@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-function North() {
+function South() {
   const [horizontal, setHorizontal] = useState(-420)
   const [vertical, setVertical] = useState(200)
   const navigate = useNavigate()
@@ -69,4 +69,4 @@ function North() {
   )
 }
 
-export default North
+export default South
