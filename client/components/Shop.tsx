@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const audio = new Audio(url(./))
+const audio = new Audio('./shop-sound.wav')
 audio.play()
 
 function Shop() {
   const [horizontal, setHorizontal] = useState(0)
-  const [vertical, setVertical] = useState(400)
+  const [vertical, setVertical] = useState(370)
   const navigate = useNavigate()
 
-  // console.log(horizontal)
+  console.log(horizontal)
   console.log(vertical)
 
   useEffect(() => {
