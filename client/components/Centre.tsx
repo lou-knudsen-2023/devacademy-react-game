@@ -16,7 +16,7 @@ function Centre() {
           if (horizontal === 270 && vertical === 90) {
             console.log('fuck yeah')
             // ADD IN REDIRECT HERE
-            navigate('/Test')
+            navigate('/Shop')
           }
         }
       } else if (e.key === 'ArrowLeft' && horizontal >= -420) {
@@ -24,21 +24,21 @@ function Centre() {
         if (horizontal === 270 && vertical === 90) {
           console.log('fuck yeah')
           // ADD IN REDIRECT HERE
-          navigate('/Test')
+          navigate('/Shop')
         }
       } else if (e.key === 'ArrowUp' && vertical >= -20) {
         setVertical(vertical - 10)
         if (horizontal === 270 && vertical === 90) {
           console.log('fuck yeah')
           // ADD IN REDIRECT HERE
-          navigate('/Test')
+          navigate('/Shop')
         }
       } else if (e.key === 'ArrowDown' && vertical <= 390) {
         setVertical(vertical + 10)
         if (horizontal === 270 && vertical === 90) {
           console.log('fuck yeah')
           // ADD IN REDIRECT HERE
-          navigate('/Test')
+          navigate('/Shop')
         }
       }
     }
