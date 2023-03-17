@@ -23,14 +23,11 @@ function Footer() {
 
   return (
     <footer>
-      {/* <p onMouseEnter={colourHandler} style={{ color: { colour } }}>
-        made by JAIL
-      </p> */}
-      <Link to={'/Centre'}>Play Game</Link>
-      {/* <Link to={'/Test'}>to Test</Link> */}
-      {/* <p onMouseEnter={handleKeyDown} style={{ color: { colour } }}> */}
-      made by Jack Andrew Issac and Lou
-      {/* </p> */}
+      <div>
+        <br></br>
+        <Link to={'/Centre'}>Play Game</Link>
+        made by Jack Andrew Issac and Lou
+      </div>
     </footer>
   )
 }
