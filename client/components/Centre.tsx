@@ -17,8 +17,7 @@ function Centre() {
             console.log('fuck yeah')
             // ADD IN REDIRECT HERE
             navigate('/Shop')
-          }
-          if (horizontal >= 410) {
+          } else if (horizontal >= 410) {
             navigate('/East')
           }
         }
