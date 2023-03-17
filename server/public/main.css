@@ -1,3 +1,11 @@
+h1 {
+color: white
+}
+
+footer {
+  color: rgb(198, 193, 193)
+}
+
 body {
   background-color: #403c3c;
   color: #0a1520;
