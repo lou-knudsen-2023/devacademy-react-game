@@ -25,10 +25,8 @@ function Centre() {
           console.log('fuck yeah')
           // ADD IN REDIRECT HERE
           navigate('/Shop')
-
         } else if (horizontal <= -410) {
           navigate('/West')
-
         }
       } else if (e.key === 'ArrowUp' && vertical >= -20) {
         setVertical(vertical - 10)
@@ -36,10 +34,8 @@ function Centre() {
           console.log('fuck yeah')
           // ADD IN REDIRECT HERE
           navigate('/Shop')
-
         } else if (vertical <= -10) {
           navigate('/North')
-
         }
       } else if (e.key === 'ArrowDown' && vertical <= 390) {
         setVertical(vertical + 10)
@@ -47,10 +43,8 @@ function Centre() {
           console.log('fuck yeah')
           // ADD IN REDIRECT HERE
           navigate('/Shop')
-
         } else if (vertical >= 380) {
           navigate('/South')
-
         }
       }
     }
