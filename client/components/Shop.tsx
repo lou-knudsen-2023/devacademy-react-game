@@ -12,6 +12,9 @@ function Shop() {
   console.log(horizontal)
   console.log(vertical)
 
+  const audio = new Audio('./font-and-images/shop-sound.wav')
+  audio.play()
+
   useEffect(() => {
     const handleKeyPress = (e) => {
       if (e.key === 'ArrowRight' && horizontal <= 430) {
@@ -39,7 +42,7 @@ function Shop() {
         }
       } else if (e.key === 'ArrowDown' && vertical <= 390) {
         setVertical(vertical + 10)
-        if (horizontal === 0 && vertical === 380) {
+        if (vertical >= 370) {
           console.log('fuck yeah')
           // ADD IN REDIRECT HERE
           navigate('/Centre')
