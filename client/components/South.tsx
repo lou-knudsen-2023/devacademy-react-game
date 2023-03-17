@@ -15,7 +15,7 @@ function South() {
         setHorizontal(horizontal - 10)
       } else if (e.key === 'ArrowUp' && vertical >= -20) {
         setVertical(vertical - 10)
-        if (vertical <= -10 && horizontal < 50) {
+        if (vertical <= -10) {
           navigate('/Centre')
           console.log('works')
         }
