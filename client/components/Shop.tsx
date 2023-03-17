@@ -1,8 +1,12 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+
+// const audio = new Audio(url())
+// audio.play()
 
 function shopMove() {
-  const [horizontal, setHorizontal] = useState(-420)
-  const [vertical, setVertical] = useState(200)
+  const [horizontal, setHorizontal] = useState(0)
+  const [vertical, setVertical] = useState(400)
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -13,7 +17,7 @@ function shopMove() {
           if (horizontal === 270 && vertical === 90) {
             console.log('fuck yeah')
             // ADD IN REDIRECT HERE
-            navigate('/Test')
+            navigate('/Centre')
           }
         }
       } else if (e.key === 'ArrowLeft' && horizontal >= -420) {
@@ -21,21 +25,21 @@ function shopMove() {
         if (horizontal === 270 && vertical === 90) {
           console.log('fuck yeah')
           // ADD IN REDIRECT HERE
-          navigate('/Test')
+          navigate('/Centre')
         }
       } else if (e.key === 'ArrowUp' && vertical >= -20) {
         setVertical(vertical - 10)
         if (horizontal === 270 && vertical === 90) {
           console.log('fuck yeah')
           // ADD IN REDIRECT HERE
-          navigate('/Test')
+          navigate('/Centre')
         }
       } else if (e.key === 'ArrowDown' && vertical <= 390) {
         setVertical(vertical + 10)
         if (horizontal === 270 && vertical === 90) {
           console.log('fuck yeah')
           // ADD IN REDIRECT HERE
-          navigate('/Test')
+          navigate('/Centre')
         }
       }
     }
