@@ -1,20 +1,26 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-// const audio = new Audio(url())
-// audio.play()
+const audio = new Audio('./shop-sound.wav')
+audio.play()
 
-function shopMove() {
+function Shop() {
   const [horizontal, setHorizontal] = useState(0)
-  const [vertical, setVertical] = useState(400)
+  const [vertical, setVertical] = useState(370)
   const navigate = useNavigate()
+
+  console.log(horizontal)
+  console.log(vertical)
+
+  const audio = new Audio('./font-and-images/shop-sound.wav')
+  audio.play()
 
   useEffect(() => {
     const handleKeyPress = (e) => {
       if (e.key === 'ArrowRight' && horizontal <= 430) {
         setHorizontal(horizontal + 10)
         {
-          if (horizontal === 270 && vertical === 90) {
+          if (horizontal === 0 && vertical === 380) {
             console.log('fuck yeah')
             // ADD IN REDIRECT HERE
             navigate('/Centre')
@@ -22,21 +28,21 @@ function shopMove() {
         }
       } else if (e.key === 'ArrowLeft' && horizontal >= -420) {
         setHorizontal(horizontal - 10)
-        if (horizontal === 270 && vertical === 90) {
+        if (horizontal === 0 && vertical === 380) {
           console.log('fuck yeah')
           // ADD IN REDIRECT HERE
           navigate('/Centre')
         }
       } else if (e.key === 'ArrowUp' && vertical >= -20) {
         setVertical(vertical - 10)
-        if (horizontal === 270 && vertical === 90) {
+        if (horizontal === 0 && vertical === 380) {
           console.log('fuck yeah')
           // ADD IN REDIRECT HERE
           navigate('/Centre')
         }
       } else if (e.key === 'ArrowDown' && vertical <= 390) {
         setVertical(vertical + 10)
-        if (horizontal === 270 && vertical === 90) {
+        if (vertical >= 370) {
           console.log('fuck yeah')
           // ADD IN REDIRECT HERE
           navigate('/Centre')
@@ -56,7 +62,7 @@ function shopMove() {
         <img
           src="https://i.imgur.com/VHQwkas.gif"
           alt="character"
-          className="character"
+          className="shop-character"
           style={{ left: horizontal, top: vertical }}
         />
       </div>
@@ -65,4 +71,4 @@ function shopMove() {
   )
 }
 
-export default shopMove
+export default Shop
