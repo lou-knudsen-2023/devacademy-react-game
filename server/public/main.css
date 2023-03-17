@@ -57,8 +57,37 @@ body {
   width: 900px;
   height: 500px;
   border: 1px solid black;
-  background-image: url(/server/public/font-and-images/east.gif);
+  background-image: url(https://wallpapercave.com/wp/wp9657802.gif);
   background-repeat: no-repeat;
   background-size:cover;
   margin: auto;
+}
+
+
+.character2 {
+  position: relative;
+  top: 200px;
+  z-index: 1;
+  left: -375px;
+  transform: scale(0.95);
+  /* transform: scaleX(1) */
+}
+
+.east2-container {
+  width: 900px;
+  height: 500px;
+  border: 1px solid black;
+  background-image: url(https://wallpaperaccess.com/full/2825801.gif);
+  background-repeat: no-repeat;
+  background-size:cover;
+  margin: auto;
+}
+
+.clown {
+  src: url(https://www.pikpng.com/pngl/b/496-4965357_random-image-from-user-8-bit-character-png.png);
+  position: relative;
+  top: 200px;
+  z-index: 1;
+  left: -375px;
+  transform: scale(0.40);
 }
