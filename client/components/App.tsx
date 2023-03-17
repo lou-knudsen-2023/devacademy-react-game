@@ -21,7 +21,7 @@ function App() {
         <Route path="/Test" element={<Test />} />
         <Route path="/Shop" element={<Shop />} />
         <Route path="/North" element={<North />} />
-        {/* <Route path="/East" element={<East />} /> */}
+        <Route path="/East" element={<East />} />
         <Route path="/South" element={<South />} />
         <Route path="/West" element={<West />} />
       </Routes>
