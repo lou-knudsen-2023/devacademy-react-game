@@ -18,6 +18,9 @@ function Centre() {
             // ADD IN REDIRECT HERE
             navigate('/Shop')
           }
+          if (horizontal >= 410) {
+            navigate('/East')
+          }
         }
       } else if (e.key === 'ArrowLeft' && horizontal >= -420) {
         setHorizontal(horizontal - 10)

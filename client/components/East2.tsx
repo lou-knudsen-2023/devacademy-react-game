@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const audio = new Audio('./font-and-images/scream.mp3')
 // audio.play()
 
 function East2() {
@@ -9,13 +8,11 @@ function East2() {
   const [vertical, setVertical] = useState(200)
   const navigate = useNavigate()
 
+  const audio = new Audio('./font-and-images/scream.mp3')
   console.log(horizontal)
 
   useEffect(() => {
     const handleKeyPress = (e) => {
-      if (horizontal === 380) {
-        audio.play()
-      }
       if (e.key === 'ArrowRight' && horizontal <= 430) {
         setHorizontal(horizontal + 10)
         {
@@ -23,6 +20,8 @@ function East2() {
             console.log('fuck yeah')
             // ADD IN REDIRECT HERE
             navigate('/Test')
+          } else if (horizontal >= 380) {
+            audio.play()
           }
         }
       } else if (e.key === 'ArrowLeft' && horizontal >= -420) {
