@@ -2,44 +2,24 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 function West() {
-  const [horizontal, setHorizontal] = useState(-420)
-  const [vertical, setVertical] = useState(200)
+  const [horizontal, setHorizontal] = useState(420)
+  const [vertical, setVertical] = useState(250)
   const navigate = useNavigate()
-
-  console.log(horizontal)
 
   useEffect(() => {
     const handleKeyPress = (e) => {
+      console.log(horizontal, vertical)
       if (e.key === 'ArrowRight' && horizontal <= 430) {
         setHorizontal(horizontal + 10)
-        {
-          if (horizontal === 270 && vertical === 90) {
-            console.log('fuck yeah')
-            // ADD IN REDIRECT HERE
-            navigate('/Test')
-          }
+        if (horizontal >= 380) {
+          navigate('/centre')
         }
       } else if (e.key === 'ArrowLeft' && horizontal >= -420) {
         setHorizontal(horizontal - 10)
-        if (horizontal === 270 && vertical === 90) {
-          console.log('fuck yeah')
-          // ADD IN REDIRECT HERE
-          navigate('/Test')
-        }
       } else if (e.key === 'ArrowUp' && vertical >= -20) {
         setVertical(vertical - 10)
-        if (horizontal === 270 && vertical === 90) {
-          console.log('fuck yeah')
-          // ADD IN REDIRECT HERE
-          navigate('/Test')
-        }
       } else if (e.key === 'ArrowDown' && vertical <= 390) {
         setVertical(vertical + 10)
-        if (horizontal === 270 && vertical === 90) {
-          console.log('fuck yeah')
-          // ADD IN REDIRECT HERE
-          navigate('/Test')
-        }
       }
     }
     document.addEventListener('keydown', handleKeyPress)
@@ -51,7 +31,7 @@ function West() {
 
   return (
     <>
-      <div className="level1-container">
+      <div className="west-container">
         <img
           src="https://i.imgur.com/VHQwkas.gif"
           alt="character"
