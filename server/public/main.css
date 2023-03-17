@@ -110,6 +110,7 @@ body {
   z-index: 1;
   left: -375px;
   transform: scale(0.40);
+}
 
 .south-container {
   width: 900px;
