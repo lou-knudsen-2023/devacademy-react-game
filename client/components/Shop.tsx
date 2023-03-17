@@ -1,12 +1,9 @@
 import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
 
-function Level1() {
+function shopMove() {
   const [horizontal, setHorizontal] = useState(-420)
   const [vertical, setVertical] = useState(200)
   const navigate = useNavigate()
-
-  console.log(horizontal)
 
   useEffect(() => {
     const handleKeyPress = (e) => {
@@ -51,7 +48,7 @@ function Level1() {
 
   return (
     <>
-      <div className="level1-container">
+      <div className="shop-container">
         <img
           src="https://i.imgur.com/VHQwkas.gif"
           alt="character"
@@ -59,14 +56,9 @@ function Level1() {
           style={{ left: horizontal, top: vertical }}
         />
       </div>
-      <div>
-        {/* <button onKeyDown={(e) => console.log(e)} onClick={handleClick}> */}
-        {/* press */}
-        {/* </button> */}
-        {/* <input type="text" onKeyDown={handleKeyPress} /> */}
-      </div>
+      <div></div>
     </>
   )
 }
 
-export default Level1
+export default shopMove
