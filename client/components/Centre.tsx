@@ -4,14 +4,20 @@ import { useNavigate } from 'react-router-dom'
 function Centre() {
   const [horizontal, setHorizontal] = useState(10)
   const [vertical, setVertical] = useState(200)
+  const [direction, setDirection] = useState('scaleX(1)')
   const navigate = useNavigate()
 
   console.log(horizontal, vertical)
+
+  function isLeft(x : string):boolean {
+    return (x == 'scaleX(1)')
+  }
 
   useEffect(() => {
     const handleKeyPress = (e) => {
       if (e.key === 'ArrowRight' && horizontal <= 430) {
         setHorizontal(horizontal + 10)
+        setDirection(isLeft(direction) ? 'scaleX(1)' : 'scaleX(1)')
         {
           if (horizontal === 270 && vertical === 90) {
             console.log('fuck yeah')
@@ -23,6 +29,7 @@ function Centre() {
         }
       } else if (e.key === 'ArrowLeft' && horizontal >= -420) {
         setHorizontal(horizontal - 10)
+        setDirection(isLeft(direction) ? 'scaleX(-1)' : 'scaleX(-)')
         if (horizontal === 270 && vertical === 90) {
           console.log('fuck yeah')
           // ADD IN REDIRECT HERE
@@ -61,10 +68,14 @@ function Centre() {
     <>
       <div className="centre-container">
         <img
-          src="https://i.imgur.com/VHQwkas.gif"
+          src="https://imgur.com/2xb6z08.gif"
           alt="character"
           className="character"
-          style={{ left: horizontal, top: vertical }}
+          style={{ 
+            left: horizontal,
+            top: vertical,
+            transform: direction
+           }}
         />
       </div>
       <div>
